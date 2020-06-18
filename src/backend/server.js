@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const { IamTokenManager } = require('ibm-watson/auth');
+const cors = require('cors')
 
 // allows environment properties to be set in a file named .env
 require('dotenv').config({ silent: true });
@@ -15,6 +16,7 @@ if (!process.env.SPEECH_TO_TEXT_IAM_APIKEY) {
 // enable rate-limiting
 const RateLimit = require('express-rate-limit');
 app.enable('trust proxy'); // required to work properly behind Bluemix's reverse proxy
+app.use(cors())
 
 const limiter = new RateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes

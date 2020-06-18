@@ -1,0 +1,6 @@
+---
+applications:
+- name: speech-to-order
+  path: build/
+  command: npm start
+  memory: 256M

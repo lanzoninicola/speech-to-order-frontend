@@ -137,7 +137,7 @@ class SpeechToText extends Component {
                 <Microphone clickAction={this.handleSpeechToMicrophone} recordingAudioStatus={streamAudioStatus} />
                 <div className="container-streaming">
                     <p className="streamAudioTextDetection"><span style={{ backgroundColor: '#f9bc60' }}>{streamText}</span></p>
-                    <p className="streamAudioText">{(streamAudioStatus === 'running') && streamAudioData}</p>
+                    <p className="streamAudiGIoText">{(streamAudioStatus === 'running') && streamAudioData}</p>
                 </div>
             </Fragment>
         );

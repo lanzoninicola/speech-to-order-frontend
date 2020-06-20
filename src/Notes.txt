@@ -1,0 +1,29 @@
+## URL
+https://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/d86be21b-c272-4038-955f-68908b2ee32d
+
+
+
+## USING WEBSOCKET PROTOCOL
+wss://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/d86be21b-c272-4038-955f-68908b2ee32d/v1/recognize
+?model=it-IT_BroadbandModel&access_token=[access_token]
+
+
+## GENERATE ACCESS_TOKEN
+## Duration: 60min
+
+https://cloud.ibm.com/docs/iam?topic=iam-iamtoken_from_apikey
+
+
+
+wss://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/d86be21b-c272-4038-955f-68908b2ee32d/v1/recognize
+?model=it-IT_BroadbandModel&access_token=eyJraWQiOiIyMDIwMDUyNTE4MzAiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLWE2ZGJjNDRlLTg5YWQtNDg5NS05NjM3LTdiMDNmNzAwZmU5NCIsImlkIjoiaWFtLVNlcnZpY2VJZC1hNmRiYzQ0ZS04OWFkLTQ4OTUtOTYzNy03YjAzZjcwMGZlOTQiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC1hNmRiYzQ0ZS04OWFkLTQ4OTUtOTYzNy03YjAzZjcwMGZlOTQiLCJuYW1lIjoiQXV0by1nZW5lcmF0ZWQgc2VydmljZSBjcmVkZW50aWFscyIsInN1YiI6IlNlcnZpY2VJZC1hNmRiYzQ0ZS04OWFkLTQ4OTUtOTYzNy03YjAzZjcwMGZlOTQiLCJzdWJfdHlwZSI6IlNlcnZpY2VJZCIsInVuaXF1ZV9pbnN0YW5jZV9jcm5zIjpbImNybjp2MTpibHVlbWl4OnB1YmxpYzpzcGVlY2gtdG8tdGV4dDpldS1kZTphLzU1MDUxMGYyYThlZDRjYjZiYTUwNDAyMzkzMjI4YWRhOmQ4NmJlMjFiLWMyNzItNDAzOC05NTVmLTY4OTA4YjJlZTMyZDo6Il0sImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6IjU1MDUxMGYyYThlZDRjYjZiYTUwNDAyMzkzMjI4YWRhIn0sImlhdCI6MTU5MjQ2NjQxOSwiZXhwIjoxNTkyNDcwMDE5LCJpc3MiOiJodHRwczovL2lhbS5jbG91ZC5pYm0uY29tL2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InVybjppYm06cGFyYW1zOm9hdXRoOmdyYW50LXR5cGU6YXBpa2V5Iiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiZGVmYXVsdCIsImFjciI6MSwiYW1yIjpbInB3ZCJdfQ.bU1RmQwILaRE7he-Ut6IW2f213hGp554tx0Cywu9wsabYHgoKhtywn5M2BeGy21xEvcS8z2eeN6oTPGOUq07BOz8EZHHKucdemUa3twUOi9i5hp_dMtSga8WsTyuvcTmpblTVSqwp0Y5aZcudbCRDZEJ99YtEwp9XSQU9aFhS6f1jZnROVA7gFY_Tt-PLHu-HX1dHJbk9Ga9bRJqvMsV3-MqjY26TJ_uuP0ypOFD67ajNp30Mm7i6tS50esD7WfEGuIsf0uBHkYOn9I05IBUi33y_Cq4-7IpiKwyQptU0L_xhuwhnmB_6x2jF8haR34IPfwvY-JbZQyTAXQ5KTsVEA
+
+
+
+
+## DEPOLY APP
+
+https://cloud.ibm.com/apps/898fe520-f9f4-4953-bbd6-978dcd0e7976?paneId=startcoding&action=start&env_id=ibm:yp:eu-gb&ace_config=%7B%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acf%3Aeu-gb%3As%2F6da16c01-2994-4cdd-a21a-e7981ebced53%3A%3Acf-application%3A898fe520-f9f4-4953-bbd6-978dcd0e7976%22%7D
+
+
+https://cloud.ibm.com/apps/898fe520-f9f4-4953-bbd6-978dcd0e7976?ace_config=%7B%22region%22%3A%22eu-gb%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acf%3Aeu-gb%3As%2F6da16c01-2994-4cdd-a21a-e7981ebced53%3A%3Acf-application%3A898fe520-f9f4-4953-bbd6-978dcd0e7976%22%2C%22resource_id%22%3A%22898fe520-f9f4-4953-bbd6-978dcd0e7976%22%2C%22orgGuid%22%3A%226b932e55-a812-4997-8412-a63d6edf1c83%22%2C%22spaceGuid%22%3A%226da16c01-2994-4cdd-a21a-e7981ebced53%22%2C%22redirect%22%3A%22https%3A%2F%2Fcloud.ibm.com%2Fresources%22%2C%22bluemixUIVersion%22%3A%22v6%22%7D&env_id=ibm%3Ayp%3Aeu-gb&paneId=startcoding

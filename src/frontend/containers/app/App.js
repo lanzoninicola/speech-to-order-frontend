@@ -1,73 +1,69 @@
 import React, { Component } from 'react';
-//import SpeechToText from '../speechToText/SpeechToText';
-import WatsonSpeech from 'watson-speech'
-
-/*
-it-IT_BroadbandModel
-it-IT_NarrowbandModel
-pt-BR_BroadbandModel
-pt-BR_NarrowbandModel
-en-GB_BroadbandModel
-en-GB_NarrowbandModel
-en-US_BroadbandModel
-en-US_NarrowbandModel
- */
-
+import SpeechToText from '../speechToText/SpeechToText';
+import PrimaryButton from '../../components/PrimaryButton'
+import './App.css';
+import TextH2 from '../../components/TextH2';
+import BodyContent from '../../components/BodyContent'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      streamAudio: {},
-      streamAudioData: ''
+      showSpeechToText: false,
+      page: 1
     }
   }
 
-  handleSpeechToMicrophone = async () => {
+  handlePageTitle = (sitePage) => {
 
-    try {
-      const response = await fetch('https://localhost:3001/api/speech-to-text/token')
-      const token = await response.json()
-
-      let stream = WatsonSpeech.SpeechToText.recognizeMicrophone({
-        accessToken: token.accessToken,
-        url: 'https://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/d86be21b-c272-4038-955f-68908b2ee32d',
-        keepMicrophone: true,
-        objectMode: true,
-        extractResults: true,
-        format: false,
-        model: 'it-IT_BroadbandModel'
-      });
-
-      this.setState({ streamAudio: stream })
-
-      this.handleStartStreamAudio()
-    } catch (error) {
-      console.log(error)
+    switch (sitePage) {
+      case 1:
+        return 'Benvenuto!'
+      case 2:
+        return ''
+      case 3:
+        return 'Cosa ti piace?'
+      default:
+        return ''
     }
   }
 
-  handleStartStreamAudio = () => {
-    this.state.streamAudio.on('data', (data) => {
-      console.log(data.alternatives[0].transcript);
-      console.log(data);
-      this.setState({ streamAudioData: data })
-    });
 
+  handleButtonText = (sitePage) => {
+
+    switch (sitePage) {
+      case 1:
+        return 'Iniziamo!'
+      case 2:
+        return 'Avanti'
+      case 3:
+        return ''
+      default:
+        return ''
+    }
   }
 
-  handleStopStreamAudio = () => {
-    this.state.streamAudio.stop()
+  handleStartProcess = () => {
+    this.setState({
+      showSpeechToText: true,
+      page: 2
+    })
+
+    console.log(this.state.showSpeechToText)
   }
+
 
   render() {
     return (
       <div className="App">
-        <header className=""></header>
-        <button onClick={this.handleSpeechToMicrophone}>listen the Microphone</button>
-        <div></div>
-        <button onClick={this.handleStopStreamAudio}>stop Microphone</button>
-      </div>
+        <header className="Header">header section</header>
+        <section className="Section">
+          <TextH2>{this.handlePageTitle(this.state.page)}</TextH2>
+          <BodyContent page={this.state.page} />
+          {this.state.showSpeechToText && <SpeechToText />}
+          <PrimaryButton event={this.handleStartProcess} label={this.handleButtonText(this.state.page)} disabled={false} />
+        </section>
+      </div >
     );
   }
 }

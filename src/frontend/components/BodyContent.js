@@ -18,8 +18,8 @@ const TextH2 = (props) => {
 
     const bodyPage3 = <p className="BodyContent">
         Prova a dire{"\n"}
-        <span style={{ color: '#f9bc60' }}>tonno</span> o {"\n"}
-        <span style={{ color: '#f9bc60' }}>capperi</span> o {"\n"}
+        <span style={{ color: '#f9bc60' }}>funghi</span> o {"\n"}
+        <span style={{ color: '#f9bc60' }}>basilico</span> o {"\n"}
         <span style={{ color: '#f9bc60' }}>cipolla</span> o {"\n"}
         <span style={{ color: '#f9bc60' }}>gamberetti</span>...{"\n"}
         O qualsiasi altro gusto che interessa...

@@ -11,12 +11,13 @@ const Microphone = (props) => {
 
     (recordingAudioStatus === 'ready') || (recordingAudioStatus === 'running') ? recordingIsRunning = true : recordingIsRunning = false;
 
-    (!recordingIsRunning) ? microphoneIconOpacity = { opacity: '0.2' } : microphoneIconOpacity = { opacity: '1' }
+    (!recordingIsRunning) ? microphoneIconOpacity = { opacity: '0.6' } : microphoneIconOpacity = { opacity: '1' }
 
     return (
         <div className="container direction-column">
-            <MicrophoneLogo className="microphone-logo" onClick={clickAction} style={microphoneIconOpacity} />
-
+            <div id="microphone-logo-container" style={microphoneIconOpacity}>
+                <MicrophoneLogo id="microphone-logo" onClick={clickAction} style={microphoneIconOpacity} />
+            </div>
             {recordingIsRunning &&
                 <div className="container direction-row recording-state">
                     <svg height="50" width="50" className="blinking">

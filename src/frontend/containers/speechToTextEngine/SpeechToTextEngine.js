@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import WatsonSpeech from 'watson-speech'
-import './SpeechToText.css'
+import './SpeechToTextEngine.css'
 import Microphone from '../../components/Microphone';
+import Transcript from '../../components/Transcript';
+import ResultPizzas from '../../components/ResultPizzas';
 
 
 /*
@@ -19,19 +21,15 @@ en-US_NarrowbandModel
 //https://cloud.ibm.com/docs/speech-to-text
 
 
-class SpeechToText extends Component {
-    constructor() {
-        super()
+class SpeechToTextEngine extends Component {
+    constructor(props) {
+        super(props)
         this.state = {
             streamAudioStatus: 'idle',
             streamAudioObject: {},
             streamAudioData: '',
             streamSentenceDetectionComplete: false
         }
-    }
-
-    componentDidMount() {
-
     }
 
     handleSpeechToMicrophone = async () => {
@@ -58,7 +56,7 @@ class SpeechToText extends Component {
 
             this.handleStartStreamAudio()
         } catch (error) {
-            console.log(error)
+            console.log('speechToTextEngine - handleSpeechToMicrophone: ', error)
         }
     }
 
@@ -82,70 +80,69 @@ class SpeechToText extends Component {
         })
     }
 
-    handleSetStreamAudioText = () => {
-
-        let text = ''
-
-        switch (this.state.streamAudioStatus) {
-            case 'idle':
-                text = ''
-                break;
-            case 'ready':
-                text = 'prova a parlare...'
-                break;
-            case 'running':
-                text = 'ti sto ascoltando...'
-                break;
-            case 'in progress':
-                text = 'ti sto ascoltando...'
-                break;
-            default:
-                text = 'stream audio completo'
-                break;
-        }
-
-        return text
-    }
-
     render() {
 
-        const { streamAudioStatus, streamAudioData } = this.state;
+        const { streamAudioStatus, streamAudioData, streamSentenceDetectionComplete } = this.state;
+        const { sitePage } = this.props
 
-        let streamText = ''
+        let streamStatusText = ''
 
-        switch (this.state.streamAudioStatus) {
+        switch (streamAudioStatus) {
             case 'idle':
-                streamText = ''
+                streamStatusText = ''
                 break;
             case 'ready':
-                streamText = 'prova a parlare...'
+                streamStatusText = 'prova a parlare...'
                 break;
             case 'running':
-                streamText = 'ti sto ascoltando...'
-                break;
-            case 'in progress':
-                streamText = 'ti sto ascoltando...'
+                streamStatusText = 'ti sto ascoltando...'
                 break;
             default:
-                streamText = 'stream audio completo'
+                streamStatusText = 'stream audio completo'
                 break;
         }
 
+        let initiateMicrophone = (sitePage === 2) ? true : false
+
+        let variable = 'sto elaborando'
 
         return (
-            <Fragment>
-                <Microphone clickAction={this.handleSpeechToMicrophone} recordingAudioStatus={streamAudioStatus} />
-                <div className="container-streaming">
-                    <p className="streamAudioTextDetection"><span style={{ backgroundColor: '#f9bc60' }}>{streamText}</span></p>
-                    <p className="streamAudiGIoText">{(streamAudioStatus === 'running') && streamAudioData}</p>
-                </div>
-            </Fragment>
+            < Fragment >
+                {initiateMicrophone &&
+                    < Microphone
+                        clickAction={this.handleSpeechToMicrophone}
+                        recordingAudioStatus={streamAudioStatus}
+                    />}
+                {(streamAudioStatus === 'ready' || streamAudioStatus === 'running') &&
+                    < Transcript
+                        streamStatusText={streamStatusText}
+                        streamAudioStatus={streamAudioStatus}
+                        streamAudioData={streamAudioData}
+                    />
+                }
+
+
+                <ResultPizzas
+                    streamAudioData={streamAudioData}
+                />
+
+            </Fragment >
         );
     }
 }
 
-export default SpeechToText;
+export default SpeechToTextEngine;
 
 // <p>After 30 seconds of continuous silence or non-speech activity (no speech) the application terminates automatically the recording session.</p>
 // <button onClick={this.handleSpeechToMicrophone}>listen the Microphone</button>
 // <button onClick={this.handleStopStreamAudio}>stop Microphone</button>
+
+/*
+{(streamSentenceDetectionComplete) ?
+                    'sto elaborando...' :
+                    <ResultPizzas
+                        streamAudioData={streamAudioData}
+                    />
+
+                }
+*/

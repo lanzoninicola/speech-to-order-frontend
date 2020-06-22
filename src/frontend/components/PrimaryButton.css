@@ -10,3 +10,12 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+
+#buttonPrimary:disabled {
+    background-color: rgba(245, 198, 128, 0.7);
+    color: rgb(0, 30, 29, 0.5);
+    cursor: auto;
+    
+
+}

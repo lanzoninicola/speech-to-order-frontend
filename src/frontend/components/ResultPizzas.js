@@ -2,6 +2,7 @@ import React from 'react'
 import './ResultPizzas.css'
 import { keywords } from '../../data/keywords';
 import pizzasJSON from '../../data/pizzas.json'
+import ResultPizza from './ResultPizza';
 
 
 const ResultPizzas = (props) => {
@@ -11,11 +12,11 @@ const ResultPizzas = (props) => {
     //console.log('ResultPizzas: ', streamAudioData)
     //console.log('ResultPizzas: ', keywords)
 
-    // dalla messaggio dell'utente estraggo le keywords corrispondenti
-    let messaggeWordsArray = streamAudioData.split(' ')
+    // dal messaggio dell'utente estraggo le keywords corrispondenti
+    let userMessageWordsArray = streamAudioData.split(' ')
     let matchedKeywords = []
-    messaggeWordsArray.forEach(messaggeWord => {
-        let matchKeyword = keywords.filter(keyword => keyword === messaggeWord) // modificare poi ingridients
+    userMessageWordsArray.forEach(messageWord => {
+        let matchKeyword = keywords.filter(keyword => keyword === messageWord)
         if (matchKeyword[0] !== undefined) matchedKeywords.push(matchKeyword[0])
         return matchedKeywords
     })
@@ -34,21 +35,15 @@ const ResultPizzas = (props) => {
 
     })
 
-    console.log(matchedPizzas)
-
-    let pizzaItems = []
-    let i = 0
-    for (let matchedPizza of matchedPizzas) {
-        i++
-        pizzaItems.push(<li key={i} style={{ fontFamily: 'Consolas', fontSize: '2rem', color: 'white' }}>{matchedPizza.name}</li>)
-    }
-
 
     return (
-        <div>
-            <ul>
-                {pizzaItems}
-            </ul>
+        <div className="container-pizzas">
+            {matchedPizzas.map((pizza, id) => {
+                return <ResultPizza name={pizza.name}
+                    ingridients={pizza.ingridients}
+                    price={pizza.price}
+                />
+            })}
         </div>
 
     )
@@ -56,3 +51,44 @@ const ResultPizzas = (props) => {
 
 
 export default ResultPizzas
+
+
+/*
+    const matchedPizzas2 = [
+        {
+            name: 'margherita',
+            ingridients: ['pomodoro', 'mozzarella'],
+            price: 3
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        },
+        {
+            name: 'marinara',
+            ingridients: ['pomodoro', 'mozzarella', 'aglio', 'basilico'],
+            price: 6.50
+        }
+    ]
+*/

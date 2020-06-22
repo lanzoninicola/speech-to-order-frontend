@@ -1,0 +1,32 @@
+.item-pizza {
+    width: 180px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: solid 4px #001e1d ;
+    border-radius: 10%;
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 254, 0.2), 0 10px 10px -5px rgba(255, 255, 254, 0.08);
+    background-color: #abd1c6;
+}
+
+#pizzaName {
+    padding: 5px;
+    font-family: Consolas;
+    font-weight: 800;
+    text-align: center;
+    color: #001e1d;
+}
+
+#pizzaIngridients {
+    padding: 5px;
+    font-family: Consolas;
+    word-wrap: break-word;
+    color: #001e1d;
+}
+
+#pizzaPrice {
+    padding: 5px;
+    font-family: Consolas;
+    font-weight: 800;
+    color: #001e1d;
+}

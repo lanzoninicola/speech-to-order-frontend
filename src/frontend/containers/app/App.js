@@ -27,21 +27,6 @@ class App extends Component {
     }
   }
 
-
-  handleButtonText = (sitePage) => {
-
-    switch (sitePage) {
-      case 1:
-        return 'Iniziamo!'
-      case 2:
-        return 'Avanti'
-      case 3:
-        return ''
-      default:
-        return ''
-    }
-  }
-
   handleButtonAction = (actionType) => {
 
     if (actionType.action === 'goForward') {
@@ -58,29 +43,31 @@ class App extends Component {
   }
 
 
+
   render() {
 
     const { streamAudioStatus, page } = this.state;
-
-
 
     return (
       <div className="App">
         <header className="Header">header section</header>
         <section className="Section">
-          <TextH2>{this.handlePageTitle(this.state.page)}</TextH2>
-          <BodyContent page={this.state.page} />
+          <TextH2>{this.handlePageTitle(page)}</TextH2>
+          <BodyContent page={page} />
           <SpeechToTextEngine
             streamAudioStatus={streamAudioStatus}
-            sitePage={this.state.page} />
-          <PrimaryButton
-            event={() => this.handleButtonAction({ action: 'goForward' })}
-            label={"Avanti"}
-            disabled={false} />
-          <PrimaryButton
-            event={() => this.handleButtonAction({ action: 'goBack' })}
-            label={"Indietro"}
-            disabled={false} />
+            sitePage={page} />
+          <div className="container-buttons">
+            <PrimaryButton
+              event={() => this.handleButtonAction({ action: 'goBack' })}
+              label={"Indietro"}
+              disabled={(page !== 1 ? false : true)} />
+            <PrimaryButton
+              event={() => this.handleButtonAction({ action: 'goForward' })}
+              label={"Avanti"}
+              disabled={(page !== 3 ? false : true)} />
+
+          </div>
         </section>
       </div >
     );

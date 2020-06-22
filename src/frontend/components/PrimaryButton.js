@@ -1,22 +1,16 @@
-import React from 'react'
-import { findByLabelText } from '@testing-library/react';
+import React, { Fragment } from 'react'
 import './PrimaryButton.css'
 
 const PrimaryButton = (props) => {
 
-    const { event, action, disabled } = props
+    const { event, disabled, label } = props
 
+    console.log(disabled);
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                margin: '20px',
-                padding: '20px'
-            }}>
-            <button id="buttonPrimary" onClick={props.event} disabled={props.disabled}>{props.label}</button>
-        </div>
+        <Fragment>
+            <button id="buttonPrimary" onClick={event} disabled={disabled}>{label}</button>
+        </Fragment>
     )
 
 }

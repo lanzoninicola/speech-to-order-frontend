@@ -9,8 +9,8 @@ const TextH2 = (props) => {
     let bodyPage = ''
 
     const bodyPage1 = <p className="BodyContent">
-        Attraverso il riconoscimento vocale questa applicazione ti consentirà di {"\n"}
-        <span style={{ color: '#f9bc60' }}>ordinare la pizza</span> {"\n"}
+        Attraverso la tua voce questa applicazione ti consentirà di {"\n"}
+        <span style={{ color: '#f9bc60' }}>suggerire delle pizze</span> {"\n"}
         in base ai tuoi gusti e preferenze.
     </p>
 

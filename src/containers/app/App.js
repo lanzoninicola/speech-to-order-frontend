@@ -50,7 +50,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="Header">header section</header>
+        <header className="Header"></header>
         <section className="Section">
           <TextH2>{this.handlePageTitle(page)}</TextH2>
           <BodyContent page={page} />

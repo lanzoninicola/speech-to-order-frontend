@@ -35,7 +35,7 @@ class SpeechToTextEngine extends Component {
     handleSpeechToMicrophone = async () => {
 
         try {
-            const response = await fetch('https://localhost:3001/api/speech-to-text/token')
+            const response = await fetch('https://speech-to-order-backend.eu-gb.mybluemix.net/api/speech-to-text/token')
             const token = await response.json()
 
             let stream = WatsonSpeech.SpeechToText.recognizeMicrophone({

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b568fe177b51c93f95e8c7a7f6741c79",
+    "revision": "4995689be2718f80c12d0e7ddf7e4ba1",
     "url": "/speech-to-order-frontend/index.html"
   },
   {

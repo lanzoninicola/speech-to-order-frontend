@@ -68,5 +68,15 @@
             "funghi porcini"
         ],
         "price": 7
+    },
+    "gamberetti_mascarpone": {
+        "name": "Gamberetti e Mascarpone",
+        "ingridients": [
+            "pomodoro",
+            "mozzarella",
+            "gamberetti",
+            "mascarpone"
+        ],
+        "price": 7
     }
 }

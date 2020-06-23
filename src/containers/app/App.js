@@ -4,7 +4,7 @@ import PrimaryButton from '../../components/PrimaryButton'
 import './App.css';
 import TextH2 from '../../components/TextH2';
 import BodyContent from '../../components/BodyContent'
-import { act } from 'react-dom/test-utils';
+
 
 class App extends Component {
   constructor() {
@@ -21,7 +21,7 @@ class App extends Component {
       case 2:
         return ''
       case 3:
-        return 'Cosa ti piace?'
+        return 'Proviamo...'
       default:
         return ''
     }

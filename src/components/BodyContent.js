@@ -9,12 +9,12 @@ const TextH2 = (props) => {
     let bodyPage = ''
 
     const bodyPage1 = <p className="BodyContent">
-        Attraverso la tua voce questa applicazione ti consentirà di {"\n"}
-        <span style={{ color: '#f9bc60' }}>suggerire delle pizze</span> {"\n"}
-        in base ai tuoi gusti e preferenze.
+        Attraverso la tua voce questa applicazione ti {"\n"}
+        <span style={{ color: '#f9bc60' }}>suggerirà delle pizze</span> {"\n"}
+        in base al condimento che preferisci.
     </p>
 
-    const bodyPage2 = <p className="BodyContent">Attiva il microfono premendo il pulsante sotto...</p>
+    const bodyPage2 = <p className="BodyContent">Facciamo un test del microfono.<br />Premi il pulsante qui sotto...</p>
 
     const bodyPage3 = <p className="BodyContent">
         Prova a dire{"\n"}

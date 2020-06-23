@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { ReactComponent as MicrophoneLogo } from '../asset/svg/microphone.svg';
 import './Microphone.css'
 

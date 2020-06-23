@@ -1,7 +1,7 @@
 import React from 'react'
 import './ResultPizzas.css'
-import { keywords } from '../../data/keywords';
-import pizzasJSON from '../../data/pizzas.json'
+import { keywords } from '../data/keywords';
+import pizzasJSON from '../data/pizzas.json'
 import ResultPizza from './ResultPizza';
 
 

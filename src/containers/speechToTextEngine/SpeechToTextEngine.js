@@ -82,7 +82,7 @@ class SpeechToTextEngine extends Component {
 
     render() {
 
-        const { streamAudioStatus, streamAudioData, streamSentenceDetectionComplete } = this.state;
+        const { streamAudioStatus, streamAudioData } = this.state;
         const { sitePage } = this.props
 
         let streamStatusText = ''
@@ -103,8 +103,6 @@ class SpeechToTextEngine extends Component {
         }
 
         let initiateMicrophone = (sitePage === 2) ? true : false
-
-        let variable = 'sto elaborando'
 
         return (
             < Fragment >

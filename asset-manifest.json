@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/speech-to-text/static/css/main.000537cb.chunk.css",
-    "main.js": "/speech-to-text/static/js/main.b320107b.chunk.js",
-    "main.js.map": "/speech-to-text/static/js/main.b320107b.chunk.js.map",
-    "runtime-main.js": "/speech-to-text/static/js/runtime-main.96d2dfa9.js",
-    "runtime-main.js.map": "/speech-to-text/static/js/runtime-main.96d2dfa9.js.map",
-    "static/js/2.809a0bfc.chunk.js": "/speech-to-text/static/js/2.809a0bfc.chunk.js",
-    "static/js/2.809a0bfc.chunk.js.map": "/speech-to-text/static/js/2.809a0bfc.chunk.js.map",
-    "index.html": "/speech-to-text/index.html",
-    "precache-manifest.ebdb33ef7bfa68de94b94171f964453e.js": "/speech-to-text/precache-manifest.ebdb33ef7bfa68de94b94171f964453e.js",
-    "service-worker.js": "/speech-to-text/service-worker.js",
-    "static/css/main.000537cb.chunk.css.map": "/speech-to-text/static/css/main.000537cb.chunk.css.map",
-    "static/js/2.809a0bfc.chunk.js.LICENSE.txt": "/speech-to-text/static/js/2.809a0bfc.chunk.js.LICENSE.txt",
-    "static/media/microphone.e4c2ee0a.svg": "/speech-to-text/static/media/microphone.e4c2ee0a.svg"
+    "main.css": "/speech-to-order-frontend/static/css/main.000537cb.chunk.css",
+    "main.js": "/speech-to-order-frontend/static/js/main.d91d1b39.chunk.js",
+    "main.js.map": "/speech-to-order-frontend/static/js/main.d91d1b39.chunk.js.map",
+    "runtime-main.js": "/speech-to-order-frontend/static/js/runtime-main.3dbc995a.js",
+    "runtime-main.js.map": "/speech-to-order-frontend/static/js/runtime-main.3dbc995a.js.map",
+    "static/js/2.ac26eb01.chunk.js": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js",
+    "static/js/2.ac26eb01.chunk.js.map": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js.map",
+    "index.html": "/speech-to-order-frontend/index.html",
+    "precache-manifest.564e899b389ae9013f21e9ddf1d9aa55.js": "/speech-to-order-frontend/precache-manifest.564e899b389ae9013f21e9ddf1d9aa55.js",
+    "service-worker.js": "/speech-to-order-frontend/service-worker.js",
+    "static/css/main.000537cb.chunk.css.map": "/speech-to-order-frontend/static/css/main.000537cb.chunk.css.map",
+    "static/js/2.ac26eb01.chunk.js.LICENSE.txt": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js.LICENSE.txt",
+    "static/media/microphone.e4c2ee0a.svg": "/speech-to-order-frontend/static/media/microphone.e4c2ee0a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.96d2dfa9.js",
-    "static/js/2.809a0bfc.chunk.js",
+    "static/js/runtime-main.3dbc995a.js",
+    "static/js/2.ac26eb01.chunk.js",
     "static/css/main.000537cb.chunk.css",
-    "static/js/main.b320107b.chunk.js"
+    "static/js/main.d91d1b39.chunk.js"
   ]
 }

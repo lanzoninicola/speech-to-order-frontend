@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52bb41af4f99fe29dadda40384cb675f",
+    "revision": "b568fe177b51c93f95e8c7a7f6741c79",
     "url": "/speech-to-order-frontend/index.html"
   },
   {
-    "revision": "7f656a0b8a9b9fb004b8",
+    "revision": "0d72511a8fc8a6c6774d",
     "url": "/speech-to-order-frontend/static/css/main.000537cb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7f656a0b8a9b9fb004b8",
-    "url": "/speech-to-order-frontend/static/js/main.d91d1b39.chunk.js"
+    "revision": "0d72511a8fc8a6c6774d",
+    "url": "/speech-to-order-frontend/static/js/main.783acfdb.chunk.js"
   },
   {
     "revision": "7af2e0998daeecf55fc2",

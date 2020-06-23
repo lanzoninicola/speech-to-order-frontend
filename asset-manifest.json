@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/speech-to-order-frontend/static/css/main.000537cb.chunk.css",
-    "main.js": "/speech-to-order-frontend/static/js/main.d91d1b39.chunk.js",
-    "main.js.map": "/speech-to-order-frontend/static/js/main.d91d1b39.chunk.js.map",
+    "main.js": "/speech-to-order-frontend/static/js/main.783acfdb.chunk.js",
+    "main.js.map": "/speech-to-order-frontend/static/js/main.783acfdb.chunk.js.map",
     "runtime-main.js": "/speech-to-order-frontend/static/js/runtime-main.3dbc995a.js",
     "runtime-main.js.map": "/speech-to-order-frontend/static/js/runtime-main.3dbc995a.js.map",
     "static/js/2.ac26eb01.chunk.js": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js",
     "static/js/2.ac26eb01.chunk.js.map": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js.map",
     "index.html": "/speech-to-order-frontend/index.html",
-    "precache-manifest.564e899b389ae9013f21e9ddf1d9aa55.js": "/speech-to-order-frontend/precache-manifest.564e899b389ae9013f21e9ddf1d9aa55.js",
+    "precache-manifest.7084627c010d09cd91304d0ddb341010.js": "/speech-to-order-frontend/precache-manifest.7084627c010d09cd91304d0ddb341010.js",
     "service-worker.js": "/speech-to-order-frontend/service-worker.js",
     "static/css/main.000537cb.chunk.css.map": "/speech-to-order-frontend/static/css/main.000537cb.chunk.css.map",
     "static/js/2.ac26eb01.chunk.js.LICENSE.txt": "/speech-to-order-frontend/static/js/2.ac26eb01.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3dbc995a.js",
     "static/js/2.ac26eb01.chunk.js",
     "static/css/main.000537cb.chunk.css",
-    "static/js/main.d91d1b39.chunk.js"
+    "static/js/main.783acfdb.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/speech-to-order-frontend/precache-manifest.564e899b389ae9013f21e9ddf1d9aa55.js"
+  "/speech-to-order-frontend/precache-manifest.7084627c010d09cd91304d0ddb341010.js"
 );
 
 self.addEventListener('message', (event) => {
